@@ -264,13 +264,13 @@ I signed in on CLIENT01 as a Sales user and tried to open Control Panel. Windows
 
 All 8 tickets are **simulated**: I created each fault or request myself in the lab, logged it in **Jira Service Management** (project MYH), then diagnosed and fixed it. Each write-up shows the report, what I checked, the fix and how I proved it worked, with screenshots.
 
-| Ticket | Scenario | Category | Write-up |
+| Ticket | Scenario | Category | Write&#8209;up |
 |---|---|---|---|
-| MYH-1 | Password reset | Active Directory | [📄 Read](tickets/MYH-1_password-reset.md) |
-| MYH-2 | New starter | User Lifecycle | [📄 Read](tickets/MYH-2_new-starter.md) |
-| MYH-3 | Trust relationship failure | Active Directory | [📄 Read](tickets/MYH-3_trust-relationship-failure.md) |
-| MYH-4 | No network after restart | Networking | [📄 Read](tickets/MYH-4_no-network-after-restart.md) |
-| MYH-5 | Restrict Command Prompt for HR (GPO) | Group Policy | [📄 Read](tickets/MYH-5_restrict-command-prompt-hr.md) |
-| MYH-6 | Account lockout | Active Directory | [📄 Read](tickets/MYH-6_account-lockout.md) |
-| MYH-7 | Folder access denied | File Services | [📄 Read](tickets/MYH-7_folder-access-denied.md) |
-| MYH-8 | Leaver | User Lifecycle | [📄 Read](tickets/MYH-8_leaver.md) |
+| MYH&#8209;1 | Password reset | Active Directory | [📄 Read](tickets/MYH-1_password-reset.md) |
+| MYH&#8209;2 | New starter | User Lifecycle | [📄 Read](tickets/MYH-2_new-starter.md) |
+| MYH&#8209;3 | Trust relationship failure | Active Directory | [📄 Read](tickets/MYH-3_trust-relationship-failure.md) |
+| MYH&#8209;4 | No network after restart | Networking | [📄 Read](tickets/MYH-4_no-network-after-restart.md) |
+| MYH&#8209;5 | Restrict Command Prompt for HR (GPO) | Group Policy | [📄 Read](tickets/MYH-5_restrict-command-prompt-hr.md) |
+| MYH&#8209;6 | Account lockout | Active Directory | [📄 Read](tickets/MYH-6_account-lockout.md) |
+| MYH&#8209;7 | Folder access denied | File Services | [📄 Read](tickets/MYH-7_folder-access-denied.md) |
+| MYH&#8209;8 | Leaver | User Lifecycle | [📄 Read](tickets/MYH-8_leaver.md) |
