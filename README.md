@@ -4,7 +4,7 @@
 <b>A Windows Server 2022 domain built from scratch in VMware, to practise first-line IT support.</b>
 </p>
 
-I built a small company network on my own PC: a domain controller (**DC01**) running Active Directory, DNS and DHCP, and a Windows 11 workstation (**CLIENT01**) joined to the domain. This page walks through the build in 19 steps, with a screenshot of each stage. The red boxes and highlights mark what each screenshot proves.
+I built a small company network on my own PC: a domain controller (**DC01**) running Active Directory, DNS and DHCP, and a Windows 11 workstation (**CLIENT01**) joined to the domain. This page walks through the build in 19 steps, with a screenshot of each stage. The red boxes and highlights mark what each screenshot proves. I then used the lab to work [8 helpdesk tickets](#helpdesk-tickets).
 
 <p align="center">
 <img src="images/lab-diagram.png" alt="Lab diagram: DC01 and CLIENT01 connected through the VMnet2 host-only network"/>
@@ -258,19 +258,19 @@ I signed in on CLIENT01 as a Sales user and tried to open Control Panel. Windows
 - A DC needs a **static IP** and must **point at itself for DNS**. Clients get their DNS server from DHCP.
 - **OUs take Group Policy; groups grant access.**
 - **Snapshots** before big changes saved me from rebuilding when things went wrong.
-- **Start DC01 first:** with it switched off, CLIENT01 gets no DHCP lease. That became helpdesk ticket MYH-4.
+- **Start DC01 first:** with it switched off, CLIENT01 gets no DHCP lease. That became helpdesk ticket [MYH-4](tickets/MYH-4_no-network-after-restart.md).
 
 <h2>Helpdesk Tickets</h2>
 
-I've worked 8 simulated helpdesk tickets in **Jira Service Management** (project MYH) against this lab. Write-ups are being added here, using the same screenshot-and-steps format.
+All 8 tickets are **simulated**: I created each fault or request myself in the lab, logged it in **Jira Service Management** (project MYH), then diagnosed and fixed it. Each write-up shows the report, what I checked, the fix and how I proved it worked, with screenshots.
 
-| Scenario | Category | Write-up |
-|---|---|---|
-| No network after restart (MYH-4) | Networking | 🔜 Coming soon |
-| Account lockout | Active Directory | 🔜 Coming soon |
-| Password reset | Active Directory | 🔜 Coming soon |
-| Trust relationship failure | Active Directory | 🔜 Coming soon |
-| Group Policy not applying | Group Policy | 🔜 Coming soon |
-| Folder sharing / permissions | File Services | 🔜 Coming soon |
-| New starter setup | User Lifecycle | 🔜 Coming soon |
-| Leaver offboarding | User Lifecycle | 🔜 Coming soon |
+| Ticket | Scenario | Category | Write-up |
+|---|---|---|---|
+| MYH-1 | Password reset | Active Directory | [📄 Read](tickets/MYH-1_password-reset.md) |
+| MYH-2 | New starter | User Lifecycle | [📄 Read](tickets/MYH-2_new-starter.md) |
+| MYH-3 | Trust relationship failure | Active Directory | [📄 Read](tickets/MYH-3_trust-relationship-failure.md) |
+| MYH-4 | No network after restart | Networking | [📄 Read](tickets/MYH-4_no-network-after-restart.md) |
+| MYH-5 | Restrict Command Prompt for HR (GPO) | Group Policy | [📄 Read](tickets/MYH-5_restrict-command-prompt-hr.md) |
+| MYH-6 | Account lockout | Active Directory | [📄 Read](tickets/MYH-6_account-lockout.md) |
+| MYH-7 | Folder access denied | File Services | [📄 Read](tickets/MYH-7_folder-access-denied.md) |
+| MYH-8 | Leaver | User Lifecycle | [📄 Read](tickets/MYH-8_leaver.md) |
