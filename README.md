@@ -1,50 +1,54 @@
-<h1>Failed RDP to IP Geolocation Information</h1>
+<!-- Add lab diagram here: <p align="center"><img src="images/lab-diagram.png" height="60%" width="60%" alt="Lab network diagram"/></p> -->
 
+<h1>IT Support Home Lab: Active Directory & Helpdesk Ticketing</h1>
 
- ### [YouTube Demonstration (@16:20)](https://youtu.be/RoZeVbbZ0o0?t=980)
+This lab copies a small company network so I can practise first-line IT support. I built a Windows Server 2022 domain controller and a Windows 11 workstation in VMware. Then I created realistic faults, logged them as tickets in **Jira Service Management**, and worked through each one: diagnose, fix, document.<br />
 
+<!-- Video section, add when ready:
+<h2>Video Demonstration</h2>
 
-<h2>Description</h2>
-<b>The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
-</b>
-<br />
-<br />
-The script is used in this demo where I setup Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honey pot.
-We will observe live attacks (RDP Brute Force) from all around the world. I will use a custom PowerShell script to
-look up the attackers Geolocation information and plot it on an Azure Sentinel Map!
-<br />
-<br />
+- ### [YouTube: IT Support Home Lab Walkthrough](https://youtu.be/YOUR_VIDEO_ID)
+-->
 
-<p align="center">
-<img src="https://i.imgur.com/3d3CEwZ.png" height="85%" width="85%" alt="RDP event fail logs to iP Geographic information"/>
-</p>
-<h2>Languages Used</h2>
+<h2>Environments and Technologies Used</h2>
 
-- <b>PowerShell:</b> Extract RDP failed logon logs from Windows Event Viewer 
+- VMware Workstation Pro (virtualisation)
+- Active Directory Domain Services (AD DS)
+- DNS & DHCP (Windows Server roles)
+- Group Policy Management
+- Jira Service Management (ticketing, project key **MYH**)
 
-<h2>Utilities Used</h2>
+<h2>Operating Systems Used</h2>
 
-- <b>ipgeolocation.io:</b> IP Address to Geolocation API
+- Windows Server 2022 (DC01)
+- Windows 11 (CLIENT01)
 
-<h2>Attacks from China coming in; Custom logs being output with geodata</h2>
+<h2>Lab Environment</h2>
 
-<p align="center">
-<img src="https://i.imgur.com/LhDCRz4.jpeg" height="85%" width="85%" alt="Image Analysis Dataflow"/>
-</p>
+| Machine | OS | Role | IP |
+|---|---|---|---|
+| **DC01** | Windows Server 2022 | Domain Controller (AD DS, DNS, DHCP) for `corp.local` | 192.168.50.10 (static) |
+| **CLIENT01** | Windows 11 | Domain-joined workstation | DHCP (192.168.50.100) |
 
-<h2>World map of incoming attacks after 24 hours (built custom logs including geodata)</h2>
+📘 Full build steps: [lab-setup/README.md](lab-setup/README.md)
 
-<p align="center">
-<img src="https://i.imgur.com/krRFrK5.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
-</p>
+<h2>Helpdesk Tickets</h2>
 
+| Ticket | Scenario | Category | Write-up |
+|---|---|---|---|
+| MYH-4 | No network after restart | Networking | 🔜 Screenshots being added |
+| MYH-? | Account lockout | Active Directory | 🔜 Coming soon |
+| MYH-? | Password reset | Active Directory | 🔜 Coming soon |
+| MYH-? | Trust relationship failure | Active Directory | 🔜 Coming soon |
+| MYH-? | Group Policy not applying | Group Policy | 🔜 Coming soon |
+| MYH-? | Folder sharing / permissions | File Services | 🔜 Coming soon |
+| MYH-? | New starter setup | User Lifecycle | 🔜 Coming soon |
+| MYH-? | Leaver offboarding | User Lifecycle | 🔜 Coming soon |
 
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+<h2>Skills Demonstrated</h2>
+
+- Diagnosing network faults (IP configuration, DHCP, DNS, APIPA addresses)
+- Managing users, computers and OUs in Active Directory
+- Creating, linking and troubleshooting Group Policy
+- Triaging, working and closing tickets in a service desk tool
+- Writing clear step-by-step technical documentation
